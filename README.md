@@ -1,50 +1,42 @@
-# React + TypeScript + Vite
+## Descripción del proyecto
+Buscador de canciones por título o nombre del artista, autenticación de usuarios usando React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Funcionalidades
+- [x] Al ingresar a la página
+* Los resultados esperados deben ser los de un artista (Adele)
+  
+- [x] Barra de búsqueda
+* El buscador funciona al presionar 'Enter' o el ícono de la lupa
+* Se puede buscar por nombre de la canción o nombre del artista
+  
+- [x] Página de resultados
+* Debe estar en una url con el query de la búsqueda (ejemplo: dominio.com/tracks?search={búsqueda_del_usuario})
+* Solo se mostrarán los resultados de la búsqueda, el infocard ya no deberá estar desplegado.
 
-Currently, two official plugins are available:
+- [x] Página de usuario
+* Si el usuario no se encuentra con la sesión iniciada se mostrarán las opciones: inciar o registrar
+* Registro de usuario
+  * Se presentará un formulario con los siguientes datos: Nombre(Obligatorio), Apellido(Obligatorio), Celular(Opcional), Género(Opcional), Correo(Obligatorio), Contraseña(Obligatorio)
+  * Con el registro terminado, el usuario es considerado con la sesión activa y no debe ingresar las credenciales para iniciar sesión
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* Inicio de sesión
+  * Debe ingresar su correo y contraseña
+* Usuario con sesión iniciada
+  * En la sección de Perfil, se mostrarán los datos del usuario con la posibilidad de modificarlos, confirmando la acción con su contraseña actual
 
-## Expanding the ESLint configuration
+- [x] Interacción con la página
+* Si el usuario no se encuentra con la sesión activa, entonces no se mostrará la sección `Mi Librería`
+* Si el usuario tiene la sesión activa puede agregar a favoritos cualquier canción
+* El usuario con la sesión activa puede ver sus canciones favoritas en `Mi Librería / Canciones`
+* El usuario autenticado puede cerrar sesión
+* Las rutas del usuario `(favorites y profile)` deben estar protegidas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+### `npm i`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Instala las dependencias.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### `npm run dev`
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Ejecuta la aplicación en modo desarrollo.
