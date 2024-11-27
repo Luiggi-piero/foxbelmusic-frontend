@@ -1,0 +1,9 @@
+.resultsTitle {
+    margin: 40px 0 20px;
+    font-family: Quicksand;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 27px;
+    color: var(--red-principal);
+}

@@ -1,0 +1,123 @@
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+.wrapSearchInner {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    right: 0;
+    top: 0;
+    transition: 1s;
+}
+
+.wrapSearchInner .search {
+    position: relative;
+}
+
+.wrapSearchInner .search input {
+    max-width: 524px;
+    height: 36px;
+    border-radius: 100px;
+    border: 1px solid var(--gray);
+    background: #FFFFFF;
+    font-size: 14px;
+    color: #333;
+    line-height: 22.5px;
+    font-weight: 400;
+    font-style: normal;
+    font-family: 'Quicksand', sans-serif;
+    padding: 5px 15px;
+}
+
+.wrapSearchInner .search img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-30px);
+    cursor: pointer;
+}
+
+.wrapSearchInner .user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.wrapSearchInner .user .name {
+    padding-left: 12px;
+    color: #4F4F4F;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    right: 0;
+    display: none;
+    z-index: 99999;
+    background-color: whitesmoke;
+}
+
+.menu a {
+    width: 100%;
+    min-width: 7rem;
+    display: block;
+    padding: 5px 10px;
+    transition: 0.2s;
+    color: #555;
+}
+
+.menu a:hover {
+    background-color: var(--red-principal);
+    color: #fff;
+    cursor: pointer;
+}
+
+.name:hover .menu {
+    display: block;
+}
+
+.login {
+    padding-left: 10px;
+    color: #555;
+}
+
+
+/* ************Responsive******************** */
+
+@media (max-width: 1190px) {
+    .wrapSearchInner {
+        width: 100%;
+    }
+}
+
+@media (max-width: 745px) {
+    .wrapSearchInner .search {
+        width: 100%;
+    }
+
+
+    .wrapSearchInner .search input {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 520px) {
+    .wrapSearchInner {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    .wrapSearchInner .user {
+        align-self: end;
+    }
+}

@@ -1,0 +1,21 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  /* Titulos y botones*/
+  --red-principal: #E86060;
+  /* Color del texto principal en lista de video*/
+  --secondary-color: #555555;
+  /* Color del texto secundario en lista de video */
+  --gray: #828282;
+  /* Otros */
+  --dark-red-secondary: #662323;
+  --soft-gray: #BDBDBD;
+  --light-red: #FF7676;
+}
+

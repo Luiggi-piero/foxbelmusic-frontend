@@ -1,0 +1,54 @@
+.container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+
+.d-initial {
+    display: initial;
+}
+
+.miniature {
+    height: 100%;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #EB5757;
+    width: inherit;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.detail {
+    color: #FFF;
+}
+
+.detail p {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.detail span {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.controlsPlay img,
+.controlsAudio img {
+    cursor: pointer;
+}
+
+.controlsPlay,
+.controlsAudio {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
