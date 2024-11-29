@@ -4,10 +4,12 @@
     align-items: center;
     height: 100%;
     margin-top: 3rem;
+    flex-direction: column;
 }
 
 .details {
-    width: 28rem;
+    max-width: 28rem;
+    width: 100%;
 }
 
 .details form {
@@ -68,4 +70,15 @@
 .labelInput {
     font-weight: 700;
     margin-bottom: 5px;
+}
+
+.back {
+    color: #555;
+    font-size: 16px;
+    align-self: self-start;
+    margin-bottom: 20px;
+}
+
+.back:hover {
+    text-decoration: underline;
 }

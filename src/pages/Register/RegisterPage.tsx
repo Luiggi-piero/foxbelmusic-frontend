@@ -23,6 +23,7 @@ function RegisterPage() {
 
     return (
         <div className={classes.container}>
+            <Link to='/' className={classes.back}>&lt; &nbsp;Ir al inicio</Link>
             <div className={classes.details}>
                 <Title title='Registro' />
                 <form onSubmit={handleSubmit(submit)}>

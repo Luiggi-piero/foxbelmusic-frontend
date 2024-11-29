@@ -23,6 +23,7 @@ function LoginPage() {
 
   return (
     <div className={classes.container}>
+      <Link to='/' className={classes.back}>&lt; &nbsp;Regresar</Link>
       <div className={classes.details}>
         <Title title='Iniciar Sesión' />
         <form onSubmit={handleSubmit(submit)}>
